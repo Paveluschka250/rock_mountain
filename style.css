@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "pt-sans";
+  src: url("assets/fonts/pt-sans.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "vigar";
+  src: url("assets/fonts/vigar.ttf") format("truetype");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "pt-sans", Arial, Helvetica, sans-serif;
+}
+
+button {
+  color: white;
+  background-color: rgb(174 134 68);
+  border: none;
+  padding: 20px;
+  font-size: 24px;
+  font-family: "pt-sans", Arial, Helvetica, sans-serif;
+  width: 300px;
+  height: 80px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+}
+
+button:hover {
+  font-size: 26px;  
+  transition: all 0.3s ease; 
+}
+
+
+header {
+  background: url(assets/img/header.png) no-repeat center / cover;
+  height: 100vh;
+  padding: 80px 160px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav img {
+  width: 100px;
+}
+
+header nav div {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+header nav div a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+header nav div a img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+header h1,
+p,
+div {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+header h1 {
+  font-family: "vigar", Arial, Helvetica, sans-serif;
+  font-size: 96px;
+  color: white;
+}
+
+header p {
+  font-size: 40px;
+  color: white;
+}
