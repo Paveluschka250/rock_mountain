@@ -15,6 +15,7 @@ html {
 body {
   margin: 0;
   font-family: "pt-sans", Arial, Helvetica, sans-serif;
+  background-color: rgb(14, 14, 14);
 }
 
 button {
@@ -89,3 +90,27 @@ header p {
   font-size: 40px;
   color: white;
 }
+
+.first-section {
+  margin: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+.first-section div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.first-section div h2 {
+  font-size: 32px;
+  color: rgb(174 134 68);
+}
+
+.first-section div img {
+  width: 400px;
+  height: 400px;
+}
+
