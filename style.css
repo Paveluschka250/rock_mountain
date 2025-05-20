@@ -36,8 +36,6 @@ button:hover {
   transition: all 0.3s ease;
 }
 
-
-
 header {
   position: fixed;
   top: 0;
@@ -48,10 +46,10 @@ header {
   align-items: center;
   padding: 10px 40px;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.1); 
+  background: rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(4px);  
-  -webkit-backdrop-filter: blur(4px); 
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 header img {
@@ -95,7 +93,6 @@ header nav a img:hover {
   transform: rotate(360deg);
 }
 
-
 .section-aot {
   background: url(assets/img/header.png) no-repeat center / cover;
   height: 100vh;
@@ -122,35 +119,36 @@ div {
 
 .section-aot p {
   font-size: 40px;
+  text-align: center;
   color: white;
 }
 
-.first-section {
+.section-features {
   margin: 100px;
   display: flex;
   justify-content: space-around;
   gap: 32px;
 }
 
-.first-section div {
+.section-features div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 30%;
 }
 
-.first-section div h2 {
+.section-features div h2 {
   font-size: 32px;
   color: rgb(174 134 68);
 }
 
-.first-section div img {
+.section-features div img {
   width: 100%;
   object-fit: cover;
   aspect-ratio: 1 / 1;
 }
 
-.second-section {
+.section-event {
   display: flex;
   align-items: center;
   gap: 48px;
@@ -159,36 +157,36 @@ div {
   height: 100%;
 }
 
-.second-section img {
+.section-event img {
   width: 25%;
 }
 
-.second-section .event-details {
+.section-event .event-details {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   flex: 1;
 }
 
-.second-section .event-details p,
+.section-event .event-details p,
 h3,
 span {
   color: white;
   font-size: 24px;
 }
 
-.second-section .line {
+.section-event .line {
   width: 2px;
   height: 300px;
   background-color: white;
 }
 
-.second-section .buy-ticket {
+.section-event .buy-ticket {
   width: 25%;
   margin-right: 32px;
 }
 
-.third-section {
+.section-text {
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -197,7 +195,7 @@ span {
   padding: 40px;
 }
 
-.third-section h3 {
+.section-text h3 {
   color: rgb(174 134 68);
   text-align: center;
   padding: 0 20%;
@@ -266,31 +264,123 @@ button {
 }
 
 @media (max-width: 1440px) {
-
-    .section-aot {
+  .section-aot {
     padding: 40px 80px;
   }
 
-  .second-section .event-details p,
+  .section-event .event-details p,
   h3,
   span {
     font-size: 16px;
     margin: 8px;
   }
 
-  .second-section {
+  .section-event {
     gap: 24px;
   }
 
-  .second-section .line {
+  .section-event .line {
     height: 200px;
   }
 }
 
 @media (max-width: 1024px) {
+  header {
+    justify-content: center;
+  }
+  header img {
+    display: none;
+    justify-content: center;
+  }
 
   footer {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  header nav {
+    justify-content: space-between;
+  }
+
+  header nav a {
+    font-size: 16px;
+  }
+
+  header nav a:nth-of-type(5),
+  header nav a:nth-of-type(6),
+  header nav a:nth-of-type(7) {
+    display: none;
+  }
+
+  .section-aot h1 {
+    font-size: 72px;
+  }
+
+  .section-features {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .section-features div {
+    width: 100%;
+    align-items: center;
+  }
+
+  .section-event {
+    flex-direction: column;
+  }
+
+  .section-event img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .section-event .line {
+    display: none;
+  }
+
+  .section-event .buy-ticket {
+    margin: 16px;
+    width: auto;
+  }
+
+  .section-text {
+    padding: 16px;
+  }
+
+  footer {
+    gap: 16px;
+  }
+
+  footer h2 {
+    font-size: 24px;
+  }
+
+  footer .footer-content .footer-subscribe {
+    width: 300px;
+  }
+
+  footer .footer-content .footer-subscribe input,
+  footer .footer-content .footer-subscribe button {
+    height: 40px;
+    font-size: 16px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  header {
+    display: none;
+  }
+
+  .section-aot h1 {
+    font-size: 56px;
+  }
+
+  footer .footer-content .footer-social {
+    gap: 40px;
   }
 }
